@@ -99,6 +99,8 @@ export default function IngenierosPage() {
 
         <div>
           <input
+            id='ing-nombre' //
+            data-test="input-nombre"
             type="text"
             placeholder="Nombre"
             value={form.namIng}
@@ -114,6 +116,8 @@ export default function IngenierosPage() {
         </div>
         <div>
           <input
+            id='ing-cargo' //
+            data-test="input-cargo"
             type="text"
             placeholder="Cargo"
             value={form.carIng}
@@ -129,6 +133,8 @@ export default function IngenierosPage() {
         </div>
         <div>
           <input
+            id='ing-especialidad' //
+            data-test="input-especialidad"
             type="text"
             placeholder="Especialidad"
             value={form.espIng}
@@ -143,6 +149,8 @@ export default function IngenierosPage() {
           )}
         </div>
         <button
+         id='ing-submit' //
+          data-test="btn-submit"
           type="submit"
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
@@ -160,12 +168,16 @@ export default function IngenierosPage() {
             </div>
             <div className="flex flex-col gap-2">
               <button
+              id='btn-edit-${i.idIng}' //
+              data-test="btn-edit"
                 onClick={() => handleEdit(i)}
                 className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
               >
                 Editar
               </button>
               <button
+              id='btn-del-${i.idIng}' //
+              data-test="btn-delete"
                 onClick={() => handleDelete(i.idIng)}
                 className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-700"
               >
