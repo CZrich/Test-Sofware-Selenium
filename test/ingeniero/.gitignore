@@ -1,0 +1,31 @@
+# Ignorar entorno virtual llamado "entorno"
+entorno/
+.env
+.venv
+
+# PyCharm
+.idea/
+*.iml
+
+# Archivos Python compilados
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs y archivos temporales
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Archivos de pruebas
+.cache/
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# Selenium WebDriver downloads (por si usas WebDriverManager)
+*.crdownload
+chromedriver.exe
+geckodriver
+msedgedriver
