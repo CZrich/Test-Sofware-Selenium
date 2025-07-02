@@ -24,6 +24,22 @@ def test_cp10_nombre_invalido(driver):
     fin_input.clear()
     fin_input.send_keys("25/06/2025")
 
+    try:
+        ingeniero_select = driver.find_element(By.XPATH, "//select[contains(@class, 'border') and contains(@class, 'rounded-md') and not(@required)]")
+        ingeniero_options = ingeniero_select.find_elements(By.TAG_NAME, "option")
+        # Excluir la opción por defecto (value="")
+        opciones_validas = [opt for opt in ingeniero_options if opt.get_attribute("value") and opt.get_attribute("value") != ""]
+        if opciones_validas:
+            # Selecciona el primer ingeniero disponible
+            ingeniero_select.click()
+            opciones_validas[0].click()
+            # Click en el botón "Añadir"
+            add_btn = driver.find_element(By.XPATH, "//button[contains(text(),'Añadir')]")
+            add_btn.click()
+    except Exception:
+        # Si no existe el select o no hay ingenieros, continúa sin error
+        pass
+
     submit_btn = driver.find_element(By.XPATH, "//button[@type='submit' and contains(text(),'Crear')]")
     submit_btn.click()
 
