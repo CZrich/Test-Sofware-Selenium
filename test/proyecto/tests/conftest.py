@@ -7,7 +7,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-BASE_URL = "http://localhost:5173/ingenieros"
+BASE_URL = "http://localhost:5173/proyectos"
 
 @pytest.fixture(scope="session")
 def driver():

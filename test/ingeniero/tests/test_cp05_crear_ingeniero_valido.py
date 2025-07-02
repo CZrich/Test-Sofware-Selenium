@@ -2,6 +2,7 @@ import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from screenshot import save_screenshot
 
 NAME  = "María López"
 CARGO = "Software"
@@ -24,3 +25,5 @@ def test_cp05_crear_ingeniero_valido(driver):
         )
     )
     assert card is not None
+    save_screenshot(driver, "cp05_crear_ingeniero_valido")
+

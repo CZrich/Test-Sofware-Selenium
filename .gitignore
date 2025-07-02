@@ -3,6 +3,11 @@ entorno/
 .env
 .venv
 
+venv/
+.env
+.venv
+
+
 # PyCharm
 .idea/
 *.iml
