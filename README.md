@@ -89,7 +89,3 @@ pytest -v .\departamento\tests\
 ```
 
 > Las pruebas generan capturas de pantalla automáticamente, las cuales se guardarán en el directorio `resultados/`.
-
-```
-
-¿Deseas también agregar una ruta específica donde se guardan las capturas (por ejemplo, `resultados/`) o dejarlo genérico como está?
