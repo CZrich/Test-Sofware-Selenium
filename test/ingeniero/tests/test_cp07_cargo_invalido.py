@@ -2,6 +2,7 @@ import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from screenshot import save_screenshot
 
 def test_cp07_cargo_invalido(driver):
     driver.get("http://localhost:5173/ingenieros")
@@ -22,3 +23,4 @@ def test_cp07_cargo_invalido(driver):
     # No debe crearse la tarjeta con ese cargo
     cards = driver.find_elements(By.XPATH, "//li[contains(., 'Te3')]")
     assert len(cards) == 0
+    save_screenshot(driver, "cp07_cargo_invalido")
